@@ -46,4 +46,7 @@ class Category (models.Model):
   description = models.TextField(blank=True)
   maxAmount = models.DecimalField(decimal_places=2)
 
-
+class Expense (models.Model):
+  category = models.ForeignKey(Category)
+  explanation = models.TextField()
+  amount = models.DecimalField(decimal_places=2)
