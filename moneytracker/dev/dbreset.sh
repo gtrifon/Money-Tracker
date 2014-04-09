@@ -9,7 +9,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)" # Absolute path of files
 
 echo 'Reset MYSQL...'
 echo "DROP DATABASE moneytracker;" | mysql -v -u root
-echo "CREATE DATABASE foodtracker CHARACTER SET utf8;" | mysql -v -u root
+echo "CREATE DATABASE moneytracker CHARACTER SET utf8;" | mysql -v -u root
 
 echo 'Sync django database...'
 python3.3 manage.py syncdb
