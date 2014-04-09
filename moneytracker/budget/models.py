@@ -44,6 +44,16 @@ class Category (models.Model):
   description = models.TextField(blank=True)
   maxAmount = models.DecimalField(decimal_places=2)
 
+  def getTotalExpenses():
+    expenseList = Entry.objects.filter()
+    #pull all expenses from "any category" and add them up
+    #see how pull from the tabel 
+    #loop through them to add them up
+    #querry the database and filter for the current field
+    #go to expense table and bring back list
+    #loop in this function to add
+    totalExpenses = 
+
 class Expense (models.Model):
   category = models.ForeignKey(Category)
   name = models.CharField(max_length=255)
