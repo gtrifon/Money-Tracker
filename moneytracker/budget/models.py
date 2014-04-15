@@ -45,7 +45,7 @@ class Category (models.Model):
   maxAmount = models.DecimalField(decimal_places=2)
 
   def getTotalExpenses():
-    expenseList = Entry.objects.filter()
+    expenseList = Expense.objects.filter(category = )
     #pull all expenses from "any category" and add them up
     #see how pull from the tabel 
     #loop through them to add them up
