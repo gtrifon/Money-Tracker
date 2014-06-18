@@ -19,10 +19,10 @@ echo "GRANT ALL PRIVILEGES ON moneytracker.* TO 'moneytrackuser'@'localhost';" |
 echo "GRANT FILE ON *.* TO 'foodtrackuser'@'localhost';" | mysql -v -u root
 
 echo 'Sync django database...'
-python3.3 manage.py syncdb
+python3 manage.py syncdb
 
 echo 'Seeding database...'
 
-# python3.3 manage.py shell < $DIR/testdata.py
+python3 manage.py shell < $DIR/seed.py
 
 echo "done!"

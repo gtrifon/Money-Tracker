@@ -12,10 +12,10 @@ echo "DROP DATABASE moneytracker;" | mysql -v -u root
 echo "CREATE DATABASE moneytracker CHARACTER SET utf8;" | mysql -v -u root
 
 echo 'Sync django database...'
-python3.3 manage.py syncdb
+python3 manage.py syncdb
 
 echo 'Seeding database...'
 
-# python3.3 manage.py shell < $DIR/testdata.py
+python3 manage.py shell < $DIR/seed.py
 
 echo 'done!'
